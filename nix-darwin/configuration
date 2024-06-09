@@ -1,0 +1,41 @@
+{ config, pkgs, lib, inputs, ... }:
+
+{
+  homebrew = {
+    enable = true;
+    casks = [
+      "1password"
+      "ableton-live-suite"
+      "android-studio"
+      "epic-games"
+      "font-blex-mono-nerd-font"
+      "google-chrome"
+      "hiddenbar"
+      "iterm2"
+      "karabiner-elements"
+      "keepingyouawake"
+      "rekordbox"
+      "rider"
+      "slack"
+      "splice"
+      "topnotch"
+      "unity-hub"
+    ];
+  };
+
+  services = {
+    skhd = {
+      enable = true;
+    };
+
+    yabai = {
+      enable = true;
+    };
+  };
+
+  system.defaults = {
+    dock = {
+      autohide = true;
+    };
+  };
+}
